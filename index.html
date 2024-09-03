@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hejazoud</title>
+
+    <!-- Google Fonts  -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+     <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+      <!-- Styles File  -->
+
+    <link rel="stylesheet" href="/syle.css" />
+
+  </head>
+  <body>
+    <div class="container-all">
+      <div class="first-section">
+        <div class="header-contain">
+          <button class="next-btn" onclick="nextStep()">
+            <span><i class="fa-solid fa-arrow-right"></i> التالى</span>
+          </button>
+
+          <img src="/assets/images/logo.png" class="image-web" alt="" />
+          <img src="/assets/images/mobile-logo.png" class="image-mobile" alt="" />
+          <button class="previous-btn" onclick="prevStep()">
+            <span>عوده </span> <i class="fa-solid fa-arrow-left"></i>
+          </button>
+        </div>
+      </div>
+      <div class="second-section">
+        <div class="step-container">
+          <div class="step" onclick="showStep(1)">
+            <div class="image-contain">
+              <img
+                src="/assets/images/gift.svg"
+                class="non-active-image"
+                alt="Step 1"
+              />
+              <img
+                src="/assets/images/gift.svg"
+                class="active-image"
+                alt="Step 1"
+              />
+            </div>
+            <p class="step-text">أختر منتج</p>
+          </div>
+          <div class="step" onclick="showStep(2)">
+            <div class="image-contain">
+              <img
+                src="/assets/images/shopping-cart.svg"
+                class="non-active-image"
+                alt="Step 2"
+              />
+              <img
+                src="/assets/images/shopping-cart-active.svg"
+                class="active-image"
+                alt="Step 2"
+              />
+            </div>
+            <p class="step-text">اختر عرض</p>
+          </div>
+          <div class="step" onclick="showStep(3)">
+            <div class="image-contain">
+              <img
+                src="/assets/images/step-3-non-active.svg"
+                class="non-active-image"
+                alt="Step 3"
+              />
+              <img
+                src="/assets/images/step-3-active.svg"
+                class="active-image"
+                alt="Step 3"
+              />
+            </div>
+            <p class="step-text">انتهز الفرصه</p>
+          </div>
+
+          <div class="progress-line">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-contain">
+        <div id="content1" class="dynamic-content">
+          <div class="text-content">
+            <p class=""></p>
+          </div>
+          <div class="items-container">
+            <div id="step1-warning" style="display: none">
+              الرجاء اختر منتج أولا
+            </div>
+            <form id="step1-form" class="step1-form">
+              <div class="card" data-card-id="1">
+                <input
+                  type="checkbox"
+                  id="checkbox1"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox1">
+                  <img src="/assets/images/product.png" alt="Product 1" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                      <p class="rating-count">(46)</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <div class="card" data-card-id="2">
+                <input
+                  type="checkbox"
+                  id="checkbox2"
+                  name="product"
+                  value="Product 2"
+                />
+                <label for="checkbox2">
+                  <img src="/assets/images/product.png" alt="Product 2" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                      <p class="rating-count">(46)</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <div class="card" data-card-id="3">
+                <input
+                  type="checkbox"
+                  id="checkbox3"
+                  name="product"
+                  value="Product 3"
+                />
+                <label for="checkbox3">
+                  <img src="/assets/images/product.png" alt="Product 3" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                      <p class="rating-count">(46)</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="content2" class="dynamic-content">
+          <div class="text-content">
+            <p>اختر العرض الذى يناسبك</p>
+          </div>
+          <div class="items-container">
+            <div id="step2-warning" style="display: none">
+              الرجاء اختر عرض أولا
+            </div>
+            <form id="step2-form" class="step1-form">
+              <div class="card" data-card-id="4">
+                <input
+                  type="checkbox"
+                  id="checkbox4"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox4">
+                  <img src="/assets/images/offer.png" alt="Product 1" />
+
+                  <hr class="horizontal-line" />
+
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>عرض اليوم الوطنى</h2>
+                    </div>
+                    <div class="description">
+                      <span>وصف المنتج يكتب هنا بشكل مبسط</span>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <div class="card" data-card-id="5">
+                <input
+                  type="checkbox"
+                  id="checkbox5"
+                  name="product"
+                  value="Product 2"
+                />
+                <label for="checkbox5">
+                  <img src="/assets/images/offer.png" alt="Product 2" />
+                  <hr class="horizontal-line" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>عرض اليوم الوطنى</h2>
+                    </div>
+                    <div class="description">
+                      <span>وصف المنتج يكتب هنا بشكل مبسط</span>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <div class="card" data-card-id="6">
+                <input
+                  type="checkbox"
+                  id="checkbox6"
+                  name="product"
+                  value="Product 3"
+                />
+                <label for="checkbox6">
+                  <img src="/assets/images/offer.png" alt="Product 3" />
+                  <hr class="horizontal-line" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>عرض اليوم الوطنى</h2>
+                    </div>
+                    <div class="description">
+                      <span>وصف المنتج يكتب هنا بشكل مبسط</span>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="content3" class="dynamic-content">
+          <div class="text-content">
+            <p>اختر هدية</p>
+          </div>
+          <div class="items-container">
+            <div id="step3-warning" style="display: none">
+              الرجاء اختر هدية أولا
+            </div>
+            <form id="step3-form" class="step3-form">
+              <div class="card" data-card-id="7">
+                <input
+                  type="checkbox"
+                  id="checkbox7"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox7">
+                  <img src="/assets/images/step3-1.png" alt="Product 1" />
+
+          
+
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>قاعده اعواد النيد</h2>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="card" data-card-id="8">
+                <input
+                  type="checkbox"
+                  id="checkbox8"
+                  name="product"
+                  value="Product 2"
+                />
+                <label for="checkbox8">
+                  <img src="/assets/images/step3-2.png" alt="Product 2" />
+             
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مبخره</h2>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="card" data-card-id="9">
+                <input
+                  type="checkbox"
+                  id="checkbox9"
+                  name="product"
+                  value="Product 3"
+                />
+                <label for="checkbox9">
+                  <img src="/assets/images/step3-3.png" alt="Product 3" />
+       
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>قاعده نحاسيه</h2>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="card" data-card-id="10">
+                <input
+                  type="checkbox"
+                  id="checkbox10"
+                  name="product"
+                  value="Product 4"
+                />
+                <label for="checkbox10">
+                  <img src="/assets/images/step3-4.png" alt="Product 4" />
+              
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>توصيل مجانى</h2>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="single-product" class="dynamic-product" >
+      <div class="product-title">
+            <p>تفاصيل المنتج</p>
+          </div>
+          <div class="product-content">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/assets/images/single-product.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/single-product.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/single-product.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/single-product.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/single-product.png" alt="">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div class="product-information">
+    <div class="toggle-content">
+      <div class="information-btn active-btn">تفاصيل المنتج</div>
+      <div class="rating-btn">التقييم والمراجعات</div>
+
+    </div>
+    <div class="information-section active-section">
+      <div class="information-content">
+        <h2 class="title-information">بكت العود المروكي الطبيعي + القاعدة</h2>
+        <h2 class="description-information">بكت العود المروكي يعتبر اول منتج مبتكر من نوعه في مجال العود والبخور ، يتميز بكت العود بالكثير من المزايا التي تجعله منتج عالي القيمة ، يأتيكم بشكل مميز تستطيع وضعها في مختلف الاماكن ، مثل السيارة والمكاتب وغيرها ..</h2>
+        <div class="advantages-information">
+          <h2 class="advantages-title">اهم مميزات بكت العود :</h2>
+          <ul>
+            <li>سهل الحمل في عبوة فاخرة .</li>
+            <li>مستخرج من العود الطبيعي عالي الجودة .</li>
+            <li>من غابات اصقون</li>
+            <li>تحتوي العبوة على 24 عود سميك وفاخر .</li>
+            <li>تدوم فترة اشتعاله الى اكثر من 55 دقيقة للعود الواحد .</li>
+            <li>بكت العود يوازي قوته ربع كيلو من العود المروكي .</li>
+            <li>سميك جداً</li>
+            <li>البكت الواحد يكفيك اكثر من 40 يوم في حال تم التبخير بشكل يومي لمدة نص ساعة .</li>
+            <li>قيمة ربع الكيلو للعود الفاخر تتجاوز 400 ريال للنوع الممتاز اما بكت العود يوصلكم بسعر رهيب</li>
+            <li>قيمة بكت العود اقل من قيمة ربع كيلو عود مروكي بنسبة 70٪ تقريبا .</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="rating-section ">
+      <div class="rating-content">
+     <div class="hotel_a">
+      <div class="precentage">4.8</div>
+     <div class="star">
+      <i class="star-empty"></i>
+      <i class="star-half"></i>
+      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<i class="fa-regular fa-star"></i>
+    </div>
+    <div class="count">
+      <h2>228 مراجعه</h2>
+    </div>
+    </div>
+      
+        <div class="guests-product">
+  <h2 class="guests-title">
+    <span class="title-web">تعليقات الضيوف
+</span>
+    <span class="title-mobile">تعليقات المستتخدمين
+</span>
+  </h2>
+  <div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+                <div class="guest-name">
+          <img src="/assets/images/guest.png" alt="">
+          <h2>Anwar Gepapwy 1 </h2>
+        </div>
+        <div class="guest-opinion">
+          <p>كان المنتج فى غاية الروعه والعرض كان مناسب جدا بنسبة لجودة المنتج</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+                <div class="guest-name">
+          <img src="/assets/images/guest-2.png" alt="">
+          <h2>Anwar Gepapwy 2</h2>
+        </div>
+        <div class="guest-opinion">
+          <p>كان المنتج فى غاية الروعه والعرض كان مناسب جدا بنسبة لجودة المنتج</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+                <div class="guest-name">
+          <img src="/assets/images/guest.png" alt="">
+          <h2>Anwar Gepapwy</h2>
+        </div>
+        <div class="guest-opinion">
+          <p>كان المنتج فى غاية الروعه والعرض كان مناسب جدا بنسبة لجودة المنتج</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+                <div class="guest-name">
+          <img src="/assets/images/guest-2.png" alt="">
+          <h2>Anwar Gepapwy</h2>
+        </div>
+        <div class="guest-opinion">
+          <p>كان المنتج فى غاية الروعه والعرض كان مناسب جدا بنسبة لجودة المنتج</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+                <div class="guest-name">
+          <img src="/assets/images/guest.png" alt="">
+          <h2>Anwar Gepapwy</h2>
+        </div>
+        <div class="guest-opinion">
+          <p>كان المنتج فى غاية الروعه والعرض كان مناسب جدا بنسبة لجودة المنتج</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+                <div class="guest-name">
+          <img src="/assets/images/guest-2.png" alt="">
+          <h2>Anwar Gepapwy</h2>
+        </div>
+        <div class="guest-opinion">
+          <p>كان المنتج فى غاية الروعه والعرض كان مناسب جدا بنسبة لجودة المنتج</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+        </div>
+
+
+        <div class="guests-opinions">
+  <h2 class="guests-title">
+    <span class="title-web">مراجعات الضيوف
+</span>
+    <span class="title-mobile">تعليقات المستتخدمين
+</span>
+  </h2>
+  <div class="swiper mySwiper3">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+  <div class="guest-name">
+    <div class="video-container">
+      <video class="video" id="video1" loop>
+        <source src="/assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay-text">
+             <div class="star">
+      <i class="star-empty"></i>
+      <i class="star-half"></i>
+      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<i class="fa-regular fa-star"></i>
+    </div>
+    <div class="overlay-description">
+      <span>مراجعه المستخدم</span>
+        <h2>منتج يستحق التجربه حقا</h2></div>
+      </div>
+      <div class="overlay-controls">
+        <button class="play-pause-btn" data-video-id="video1"><i class="fa-solid fa-play"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="guest-name">
+    <div class="video-container">
+      <video class="video" id="video2" loop>
+        <source src="/assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay-text">
+             <div class="star">
+      <i class="star-empty"></i>
+      <i class="star-half"></i>
+      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<i class="fa-regular fa-star"></i>
+    </div>
+    <div class="overlay-description">
+      <span>مراجعه المستخدم</span>
+        <h2>منتج يستحق التجربه حقا</h2></div>
+      </div>
+      <div class="overlay-controls">
+        <button class="play-pause-btn" data-video-id="video2"><i class="fa-solid fa-play"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="guest-name">
+    <div class="video-container">
+      <video class="video" id="video3" loop>
+        <source src="/assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay-text">
+             <div class="star">
+      <i class="star-empty"></i>
+      <i class="star-half"></i>
+      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<i class="fa-regular fa-star"></i>
+    </div>
+    <div class="overlay-description">
+      <span>مراجعه المستخدم</span>
+        <h2>منتج يستحق التجربه حقا</h2></div>
+      </div>
+      <div class="overlay-controls">
+        <button class="play-pause-btn" data-video-id="video3"><i class="fa-solid fa-play"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="guest-name">
+    <div class="video-container">
+      <video class="video" id="video4" loop>
+        <source src="/assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay-text">
+             <div class="star">
+      <i class="star-empty"></i>
+      <i class="star-half"></i>
+      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<i class="fa-regular fa-star"></i>
+    </div>
+    <div class="overlay-description">
+      <span>مراجعه المستخدم</span>
+        <h2>منتج يستحق التجربه حقا</h2></div>
+      </div>
+      <div class="overlay-controls">
+        <button class="play-pause-btn" data-video-id="video4"><i class="fa-solid fa-play"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="guest-name">
+    <div class="video-container">
+      <video class="video" id="video5" loop>
+        <source src="/assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay-text">
+             <div class="star">
+      <i class="star-empty"></i>
+      <i class="star-half"></i>
+      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<i class="fa-regular fa-star"></i>
+    </div>
+    <div class="overlay-description">
+      <span>مراجعه المستخدم</span>
+        <h2>منتج يستحق التجربه حقا</h2></div>
+      </div>
+      <div class="overlay-controls">
+        <button class="play-pause-btn" data-video-id="video5"><i class="fa-solid fa-play"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+          </div>
+        </div>
+      </div>
+      <div id="content4" class="dynamic-form" style="display: none;">
+        <div class="payment-page">
+          <div class="first-payment">
+            <span class="order-title">ملخص الطلب</span>
+            <div>
+              <span> عرض اليوم الوطنى </span>
+              <span>360 ريال</span>
+            </div>
+            <div>
+              <span> هدية قعدة نحاسيه </span>
+              <span>-</span>
+            </div>
+            <div>
+              <span> التوصيل </span>
+              <span>80 ريال</span>
+            </div>
+            <div>
+              <span> اجمالى </span>
+              <span>440 ريال</span>
+            </div>
+          </div>
+          <div class="second-payment">
+            <span class="order-title">بيانات التوصيل</span>
+            <form action="" class="form-details">
+              <div>
+                <label for="fname">الأسم ثلاثى</label>
+                <input type="text" id="fname" name="fname" />
+              </div>
+              <div>
+                <label for="fwhats">رقم الواتس أب</label>
+                <input type="text" id="fwhats" name="fwhats" />
+              </div>
+              <div class="custom-select">
+                <div>
+                  <label for="city">المدينه</label>
+                  <select name="city" id="city">
+                    <option value=""></option>
+                  </select>
+                </div>
+                <div>
+                  <label for="street">الشارع</label>
+                  <select name="street" id="street">
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="Fmoredetail">تفاصيل اكثر</label>
+                <input type="text" id="Fmoredetail" name="Fmoredetail" />
+              </div>
+            </form>
+          </div>
+          <div class="third-payment">
+            <span class="order-title">بيانات الدفع</span>
+            <form action="" class="form-payment">
+              <div>
+                <label for="fnamecard">اسم حامل البطاقة</label>
+                <input type="text" id="fnamecard" name="fnamecard" />
+              </div>
+              <div>
+                <label for="fcardnumber">رقم البطاقة</label>
+                <input type="text" id="fcardnumber" name="fcardnumber" />
+              </div>
+              <div class="custom-select">
+                <div>
+            <label for="fcvv">CVV</label>
+                <input type="text" id="fcvv" name="fcvv" />
+                </div>
+                <div>
+            <label for="fdate">تاريخ انتهاء الصلاحيه</label>
+                <input type="text" id="fdate" name="fdate" />
+                </div>
+        
+              </div>
+  
+            </form>
+          </div>
+          <button type="submit" class="payment-btn">
+            <span>تأكيد الطلب</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+
+
+    
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  var swiper = new Swiper(".mySwiper2", {
+      slidesPerView: 4, /* Default for larger screens */
+      spaceBetween: 50,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-prev",
+        prevEl: ".swiper-button-next",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1, /* For screens 320px and above */
+          spaceBetween: 6,
+        },
+        640: {
+          slidesPerView: 2, /* For screens 640px and above */
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3, /* For screens 768px and above */
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4, /* For screens 1024px and above */
+          spaceBetween: 50,
+        },
+      }
+    });
+
+
+
+    var swiper = new Swiper(".mySwiper3", {
+      slidesPerView: 3, /* Default for larger screens */
+      spaceBetween: 50,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-prev",
+        prevEl: ".swiper-button-next",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1, /* For screens 320px and above */
+          spaceBetween: 12,
+        },
+        640: {
+          slidesPerView: 2, /* For screens 640px and above */
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3, /* For screens 768px and above */
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3, /* For screens 1024px and above */
+          spaceBetween: 75,
+        },
+      }
+    });
+  </script>
+  </script>
+  </body>
+</html>
