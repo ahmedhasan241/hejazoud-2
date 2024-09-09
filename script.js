@@ -29,27 +29,28 @@ function showStep(step) {
       return;
     } else {
       warning.style.display = "none";
+         content1.style.display = "none";
       const step2 = document.querySelectorAll(".step")[1];
       step2.classList.remove("disabled");
     }
   }
-  if (currentStep === 2 && step === 3) {
-    const form = document.getElementById("step2-form");
-    const warning = document.getElementById("step2-warning");
-                  singleProduct.style.display = "none";
-    const isChecked = Array.from(
-      form.querySelectorAll('input[type="checkbox"]')
-    ).some((checkbox) => checkbox.checked);
+  // if (currentStep === 2 && step === 3) {
+  //   const form = document.getElementById("step2-form");
+  //   const warning = document.getElementById("step2-warning");
+  //                 singleProduct.style.display = "none";
+  //   const isChecked = Array.from(
+  //     form.querySelectorAll('input[type="checkbox"]')
+  //   ).some((checkbox) => checkbox.checked);
 
-    if (!isChecked) {
-      warning.style.display = "block";
-      return;
-    } else {
-      warning.style.display = "none";
-      const step3 = document.querySelectorAll(".step")[2];
-      step3.classList.remove("disabled");
-    }
-  }
+  //   if (!isChecked) {
+  //     warning.style.display = "block";
+  //     return;
+  //   } else {
+  //     warning.style.display = "none";
+  //     const step3 = document.querySelectorAll(".step")[2];
+  //     step3.classList.remove("disabled");
+  //   }
+  // }
   if (currentStep === 3 && step === 4) {
     const form = document.getElementById("step3-form");
     const warning = document.getElementById("step3-warning");
@@ -141,21 +142,21 @@ function nextStep() {
   if (currentStep === 1) {
               singleProduct.style.display = "none";
        }
-        if (currentStep === 2) {
-    const isChecked = Array.from(
-      form2.querySelectorAll('input[type="checkbox"]')
-    ).some((checkbox) => checkbox.checked);
-     singleProduct.style.display = "none";
-    if (!isChecked) {
-      warning2.style.display = "block";
-      return;
-    } else {
-      warning2.style.display = "none";
-    }
+    //     if (currentStep === 2) {
+    // const isChecked = Array.from(
+    //   form2.querySelectorAll('input[type="checkbox"]')
+    // ).some((checkbox) => checkbox.checked);
+    //  singleProduct.style.display = "none";
+    // if (!isChecked) {
+    //   warning2.style.display = "block";
+    //   return;
+    // } else {
+    //   warning2.style.display = "none";
+    // }
 
-    const step3 = document.querySelectorAll(".step")[2];
-    step3.classList.remove("disabled");
-    }
+    // const step3 = document.querySelectorAll(".step")[2];
+    // step3.classList.remove("disabled");
+    // }
     
     if (currentStep === 3) {
     const isChecked3= Array.from(
@@ -209,48 +210,199 @@ function prevStep() {
   }
 }
 
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("step1-form");
-  const content1 = document.getElementById("content1"); // Correct element
-  const singleProduct = document.getElementById("single-product");
 
   let selectedCard = null;
 
   form.querySelectorAll(".card").forEach((card) => {
     card.addEventListener("click", () => {
-      // Uncheck all checkboxes and remove the 'selected' class from all cards
+      // Uncheck all checkboxes and reset border color for all cards
       form.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
         checkbox.checked = false;
       });
 
       form.querySelectorAll(".card").forEach((c) => {
-        c.classList.remove("selected");
+        c.style.borderColor = ""; // Reset border color
       });
 
-      // Check the selected checkbox and add the 'selected' class
+      // Check the selected checkbox and change the border color
       const checkbox = card.querySelector('input[type="checkbox"]');
       checkbox.checked = true;
 
       if (selectedCard) {
-        selectedCard.classList.remove("selected");
+        selectedCard.style.borderColor = ""; // Reset previous selected card's border color
       }
-      card.classList.add("selected");
+      card.style.borderColor = "black"; // Change border color for the currently selected card
       selectedCard = card;
-
-      // Hide the content1 div
-      content1.style.display = "none";
-
-      // Show the single-product div
-      singleProduct.style.display = "block"; // Ensure single-product is a flex container
+      
     });
   });
 
   // Initially disable Step 2 if needed
   const step2 = document.querySelectorAll(".step")[1];
-  step2.classList.add("disabled");
-  step2.style.pointerEvents = "none"; // Disable click
+  if (step2) {
+    step2.classList.add("disabled");
+    step2.style.pointerEvents = "none"; // Disable click
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.querySelector(".step1-form-theme-2");
+  const content1 = document.getElementById("content1");
+  const singleProduct = document.getElementById("single-product");
+
+  let selectedCard = null;
+
+  form.querySelectorAll(".card").forEach((card) => {
+    const btnBuy = card.querySelector(".btn-buy");
+
+    btnBuy.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent the form from submitting or the page from refreshing
+      event.stopPropagation(); // Prevent event from bubbling up to the card
+
+      // Uncheck all checkboxes and reset border color for all cards
+      form.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.checked = false;
+      });
+
+      form.querySelectorAll(".card").forEach((c) => {
+        c.style.borderColor = ""; // Reset border color
+      });
+
+      // Check the selected checkbox and change the border color
+      const checkbox = card.querySelector('input[type="checkbox"]');
+      checkbox.checked = true;
+
+      if (selectedCard) {
+        selectedCard.style.borderColor = ""; // Reset previous selected card's border color
+      }
+      card.style.borderColor = "black"; // Change border color for the currently selected card
+      selectedCard = card;
+      showStep(2)
+      // Perform any additional logic specific to btn-buy click here
+      console.log(`Product with ID ${card.dataset.cardId} has been selected.`);
+    });
+  });
+
+  // Initially disable Step 2 if needed
+  const step2 = document.querySelectorAll(".step")[1];
+  if (step2) {
+    step2.classList.add("disabled");
+    step2.style.pointerEvents = "none"; // Disable click
+  }
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const content1 = document.getElementById("content1");
+  const singleProduct = document.getElementById("single-product");
+    const stepSection = document.querySelector(".second-section");
+  const contentSection = document.querySelector(".content-contain");
+   const containerAll = document.querySelector(".container-all");
+    const nextButton = document.querySelector(".next-btn");
+  const backToStepOne = document.querySelector(".back-to-step1");
+      const prevButton = document.querySelector(".previous-btn");
+  const body = document.body;
+  document.querySelectorAll(".details-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent the button's default behavior
+      nextButton.style.visibility = "hidden";
+      // Hide the content1 div
+      content1.style.display = "none";
+      stepSection.style.display="none";
+
+      // Show the single-product div
+      singleProduct.style.display = "block";
+      backToStepOne.style.display = "block";
+      prevButton.style.display = "none";
+
+  contentSection.style.height = "auto";
+      contentSection.style.overflow = "auto";
+      
+      containerAll.style.height = "auto";
+      containerAll.style.overflow = "auto";
+      body.style.overflow = "auto"; s
+
+    });
+  });
+  // Function to handle 'back-to-step1' button click
+  window.backToStepOne = function() {
+    // Show content1 div and stepSection
+    content1.style.display = "block";
+    stepSection.style.display = "block";
+
+    // Hide the single-product div
+    singleProduct.style.display = "none";
+
+    // Hide backToStepOne button and show prevButton
+    backToStepOne.style.display = "none";
+    prevButton.style.display = "block";
+    nextButton.style.visibility = "visible";
+    // Reset contentSection and containerAll
+    contentSection.style.height = "100vh";
+    contentSection.style.overflow = "hidden";
+    containerAll.style.height = "100vh";
+    containerAll.style.overflow = "auto";
+    body.style.overflow = "hidden"; // Adjust if needed based on your layout
+  };
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const content1 = document.getElementById("content1");
+  const singleProduct = document.getElementById("single-product");
+    const stepSection = document.querySelector(".second-section");
+  const contentSection = document.querySelector(".content-contain");
+   const containerAll = document.querySelector(".container-all");
+    const nextButton = document.querySelector(".next-btn");
+  const backToStepOne = document.querySelector(".back-to-step1");
+      const prevButton = document.querySelector(".previous-btn");
+  const body = document.body;
+  document.querySelectorAll(".btn-detail").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent the button's default behavior
+      nextButton.style.visibility = "hidden";
+      // Hide the content1 div
+      content1.style.display = "none";
+      stepSection.style.display="none";
+
+      // Show the single-product div
+      singleProduct.style.display = "block";
+      backToStepOne.style.display = "block";
+      prevButton.style.display = "none";
+
+  contentSection.style.height = "auto";
+      contentSection.style.overflow = "auto";
+      
+      containerAll.style.height = "auto";
+      containerAll.style.overflow = "auto";
+      body.style.overflow = "auto"; s
+
+    });
+  });
+  // Function to handle 'back-to-step1' button click
+  window.backToStepOne = function() {
+    // Show content1 div and stepSection
+    content1.style.display = "block";
+    stepSection.style.display = "block";
+
+    // Hide the single-product div
+    singleProduct.style.display = "none";
+
+    // Hide backToStepOne button and show prevButton
+    backToStepOne.style.display = "none";
+    prevButton.style.display = "block";
+    nextButton.style.visibility = "visible";
+    // Reset contentSection and containerAll
+    contentSection.style.height = "100vh";
+    contentSection.style.overflow = "hidden";
+    containerAll.style.height = "100vh";
+    containerAll.style.overflow = "auto";
+    body.style.overflow = "hidden"; // Adjust if needed based on your layout
+  };
+});
 
 
 
@@ -260,21 +412,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.querySelectorAll(".card").forEach((card) => {
     card.addEventListener("click", () => {
+      // Uncheck all checkboxes and reset border color for all cards
       form.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
         checkbox.checked = false;
       });
 
       form.querySelectorAll(".card").forEach((c) => {
-        c.classList.remove("selected");
+        c.style.borderColor = ""; // Reset border color
       });
 
+      // Check the selected checkbox and change the border color
       const checkbox = card.querySelector('input[type="checkbox"]');
       checkbox.checked = true;
 
       if (selectedCard) {
-        selectedCard.classList.remove("selected");
+        selectedCard.style.borderColor = ""; // Reset previous selected card's border color
       }
-      card.classList.add("selected");
+      card.style.borderColor = "black"; // Change border color for selected card
       selectedCard = card;
 
       // Enable Step 2 when a product is selected
@@ -286,8 +440,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initially disable Step 2
   const step3 = document.querySelectorAll(".step")[2];
-  step3.classList.add("disabled");
-  step3.style.pointerEvents = "none"; // Disable click
+  // step3.classList.add("disabled");
+  step3.style.pointerEvents = "pointer"; // Disable click
 
   showStep(currentStep); // Initially show the first step as active
 });
@@ -298,21 +452,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.querySelectorAll(".card").forEach((card) => {
     card.addEventListener("click", () => {
+     // Uncheck all checkboxes and reset border color for all cards
       form.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
         checkbox.checked = false;
       });
 
       form.querySelectorAll(".card").forEach((c) => {
-        c.classList.remove("selected");
+        c.style.borderColor = ""; // Reset border color
       });
 
+      // Check the selected checkbox and change the border color
       const checkbox = card.querySelector('input[type="checkbox"]');
       checkbox.checked = true;
 
       if (selectedCard) {
-        selectedCard.classList.remove("selected");
+        selectedCard.style.borderColor = ""; // Reset previous selected card's border color
       }
-      card.classList.add("selected");
+      card.style.borderColor = "black"; // Change border color for selected card
       selectedCard = card;
 
       // Enable Step 2 when a product is selected
@@ -387,4 +543,59 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".step1-form-theme-3");
+  const productImage = document.querySelector(".product-image"); // Main product image
+  let selectedCard = null;
+
+  form.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("click", () => {
+      // Uncheck all checkboxes and reset border color for all cards
+      form.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.checked = false;
+      });
+
+      form.querySelectorAll(".card").forEach((c) => {
+        c.style.borderColor = ""; // Reset border color for all cards
+      });
+
+      // Check the selected checkbox and change the border color
+      const checkbox = card.querySelector('input[type="checkbox"]');
+      checkbox.checked = true;
+
+      // Reset previous selected card's border color, if any
+      if (selectedCard) {
+        selectedCard.style.borderColor = "";
+      }
+
+      // Change border color for the selected card
+      card.style.borderColor = "black";
+      selectedCard = card;
+
+      // Update the main product image with the selected card's image
+      const selectedImageSrc = card.querySelector("img").getAttribute("src");
+      productImage.setAttribute("src", selectedImageSrc);
+    });
+  });
+});
+
+
+document.getElementById('fcardnumber').addEventListener('input', function (event) {
+    const input = event.target;
+    let value = input.value.replace(/\s+/g, ''); // Remove existing spaces
+    
+    // Limit the length to 16 digits
+    if (value.length > 16) {
+        value = value.slice(0, 16);
+    }
+
+    // Add space every 4 digits
+    value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+    // Update input value
+    input.value = value;
 });

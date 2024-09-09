@@ -22,7 +22,8 @@ body {
 
 .first-section {
   width: 100%;
-  height: 20vh;
+  height: 15vh;
+  margin: 0 0 20px 0;
 }
 .header-contain {
   display: flex;
@@ -36,6 +37,8 @@ body {
 }
 .header-contain .image-web {
   display: block;
+  width: 114px;
+  height: 100px;
 }
 .header-contain .image-mobile {
   display: none;
@@ -63,7 +66,21 @@ body {
   border: 1px solid black !important;
   color: black;
 }
+.back-to-step1 {
+  display: none;
+  width: 48px;
+  height: 48px;
+  top: 20px;
+  left: 20px;
+  padding: 12px;
+  gap: 0px;
+  border-radius: 8px;
 
+  background-color: white;
+  border: none;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Example shadow */
+  cursor: pointer;
+}
 .previous-btn {
   width: 93px;
   height: 42px;
@@ -94,6 +111,7 @@ body {
   .first-section {
     width: 100%;
     height: 10vh;
+    margin: 0 0 0px 0;
   }
 
   .header-contain {
@@ -135,7 +153,8 @@ body {
 /* Start Steps Styles  */
 .second-section {
   width: 100%;
-  height: 20vh;
+  height: 15vh;
+  margin: 0 0 40px 0;
 }
 
 .step-container {
@@ -143,7 +162,7 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  width: 1024px;
+  width: 800px;
   padding: 10px 0 0 0;
   margin: 0 auto;
 }
@@ -153,16 +172,18 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 148px;
-  width: 120px;
+  height: 70px;
+  width: 80px;
   border: 5px solid white;
   z-index: 2;
+  background-color: white;
 }
 .step .step-text {
   font-family: "Almarai";
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 34px;
+  line-height: 24px;
+  padding: 0px !important;
   text-align: center;
 }
 
@@ -179,8 +200,9 @@ body {
   cursor: not-allowed;
 }
 .image-contain {
-  width: 115px;
-  height: 115px;
+  width: 70px;
+  height: 60px;
+  padding: 10px 0px;
   border-radius: 12px;
   background-color: white;
   display: flex;
@@ -197,8 +219,8 @@ body {
 }
 
 .step img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: none;
   margin: auto;
 }
@@ -229,7 +251,7 @@ body {
 
 .progress-line {
   position: absolute;
-  top: 60px;
+  top: 50px;
   left: 0;
   right: 0;
   height: 3px;
@@ -267,6 +289,8 @@ body {
   .second-section {
     width: 100%;
     height: 14vh;
+    box-sizing: border-box;
+    margin: 0 !important;
   }
   .step {
     display: flex;
@@ -346,17 +370,178 @@ body {
 /* End Steps Styles  */
 
 .content-contain {
-  width: 100%;
+  width: 100vw;
   align-items: center;
-  height: 50vh;
+  height: 55vh;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 .dynamic-content {
   background: white;
-  padding: 20px;
+  padding: 20px 0;
   border-radius: 8px;
+  width: 90%;
+  text-align: center;
+  height: 100%;
+  display: none;
+}
+.the-first-theme {
+  background: white;
+  padding: 20px 0;
+  border-radius: 8px;
+  width: 90%;
+  text-align: center;
+  height: 100%;
+  display: none;
+}
+.the-second-theme {
+  background: white;
+  padding: 20px 0;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  width: 90%;
+  text-align: center;
+  height: 100%;
+  display: none;
+}
+
+.the-second-theme .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid #ddd;
+
+  border-radius: 12px;
+  padding: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: border-color 0.3s;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.06);
+}
+
+.the-second-theme .card img {
+  width: 100%;
+  border-radius: 6px;
+}
+.the-second-theme .card .card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.the-second-theme .card .card-title .title h2 {
+  margin: 8px 0 !important;
+  font-family: "Almarai";
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.the-second-theme .card .card-title .rating-contain {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.the-second-theme .card .card-title .rating-contain .rating-star {
+  color: black !important;
+  font-size: 12px;
+  margin: 0px;
+}
+
+.the-second-theme .card .card-title .rating-contain .rating-precent {
+  font-family: "Almarai";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 9.6px;
+  text-align: right;
+  margin: 0;
+  align-self: center;
+}
+.the-second-theme .card .price-contain .price-text {
+  font-family: "Almarai";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: right;
+}
+
+.the-second-theme .card .card-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+  margin-top: 12px;
+}
+.the-second-theme .card .card-actions .btn-buy-contain .btn-buy {
+  background-color: black !important;
+  font-family: "Almarai";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid black;
+  transition: all 0.3s linear;
+  color: white;
+  cursor: pointer;
+}
+
+.the-second-theme .card .card-actions .btn-buy-contain .btn-buy:hover {
+  background-color: white !important;
+  font-family: "Almarai";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+.the-second-theme .card .card-actions .btn-detail-contain .btn-detail {
+  background-color: white !important;
+  font-family: "Almarai";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid black;
+  transition: all 0.3s linear;
+  color: black;
+  cursor: pointer;
+}
+.the-second-theme .card .card-actions .btn-detail-contain .btn-detail:hover {
+  background-color: black !important;
+  font-family: "Almarai";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid black;
+  transition: all 0.3s linear;
+  color: white;
+  cursor: pointer;
+}
+
+.the-third-theme {
+  background: white;
+  padding: 20px 0;
+  border-radius: 8px;
+  margin-bottom: 50px;
   width: 90%;
   text-align: center;
   height: 100%;
@@ -400,7 +585,66 @@ body {
   margin: 20px 0 10px 0 !important;
 }
 
-.card {
+#step2-form .card,
+.the-first-theme #step1-form .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 75%;
+  border: 2px solid #ddd;
+  /* border: 2px solid #ddd; */
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: border-color 0.3s;
+}
+
+.the-first-theme
+  #step1-form
+  .card
+  .price-contain
+  .product-details-btn
+  .details-btn {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px !important;
+  padding: 4px 5px !important;
+  font-family: "Almarai";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.the-first-theme
+  #step1-form
+  .card
+  .price-contain
+  .product-details-btn
+  .details-btn:hover {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px !important;
+  padding: 4px 5px !important;
+  font-family: "Almarai";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+}
+#step3-form .card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,16 +652,16 @@ body {
   width: 90%;
   border: 2px solid #ddd;
   border-radius: 12px;
-  padding: 25px 0;
+  padding: 25px 20px;
   box-sizing: border-box;
   cursor: pointer;
-  margin: 10px;
+  margin: 10px 0;
   transition: border-color 0.3s;
 }
 
-#step1-form .card img {
-  width: 371px;
-  height: 180px;
+.the-first-theme #step1-form .card img {
+  width: 260px;
+  height: 150px;
   border: 0.5px solid #e6e6e6;
   border-radius: 12px;
   object-fit: cover;
@@ -445,7 +689,7 @@ body {
   opacity: 0.5;
 }
 .card p {
-  margin: 10px 0 0;
+  margin: 0px 0 0;
   font-weight: bold;
 }
 
@@ -454,26 +698,52 @@ body {
 }
 
 .card.selected {
-  border-color: black;
+  border: 2px solid black;
 }
 
 .card:hover {
   border-color: #888;
 }
 
-.step1-form {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr);
+.the-first-theme .step1-form,
+#step2-form {
+  display: flex;
+  flex-direction: row;
   gap: 16px;
   align-items: center;
+  width: 1300px;
+  margin: 0 auto;
+  overflow-x: auto;
 }
+
+.the-first-theme .step1-form::-webkit-scrollbar,
+#step2-form::-webkit-scrollbar {
+  width: 4px;
+}
+
+.the-first-theme .step1-form::-webkit-scrollbar-track,
+,
+#step2-form::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.the-first-theme .step1-form::-webkit-scrollbar-thumb,
+,
+#step2-forms::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #363636;
+}
+
 .step3-form {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   align-items: center;
 }
-#step1-form .card-title {
+.the-first-theme #step1-form .card-title {
   display: flex !important;
   justify-content: space-between;
 }
@@ -482,30 +752,31 @@ body {
   flex-direction: column;
   align-items: start;
 }
-#step1-form .rating-contain {
+.the-first-theme #step1-form .rating-contain {
   display: flex;
   direction: ltr;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
-#step1-form .card-title .title h2 {
+.the-first-theme #step1-form .card-title .title h2 {
   font-family: "Almarai";
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 34px;
   text-align: right;
+  margin: 0px 0 !important;
 }
 #step2-form .card-title .title h2 {
   font-family: "Almarai";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 16.8px;
   text-align: right;
 }
 #step2-form .card-title .description span {
   font-family: "Almarai";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 14.4px;
   text-align: right;
@@ -539,11 +810,15 @@ body {
 }
 .price-text {
   font-family: "Almarai";
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 21.6px;
   text-align: right;
   word-spacing: 5px;
+}
+
+#step2-form .price-text {
+  margin-top: 8px !important;
 }
 .secondary-price {
   text-decoration-line: line-through;
@@ -561,6 +836,14 @@ body {
 
   margin-top: 25px;
 }
+
+.the-second-theme #step1-warning,
+.the-third-theme #step1-warning {
+  color: red;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px !important;
+}
 @media (max-width: 575.98px) {
   .content-contain {
     height: auto;
@@ -571,20 +854,50 @@ body {
     width: 100%;
     padding: 0px 15px;
   }
+  .the-first-theme {
+    display: none !important;
+  }
+  .the-second-theme {
+    width: 100%;
+    padding: 25px 15px 70px;
+    height: 68vh;
+    overflow-y: auto;
+    display: none;
+  }
+
+  .the-second-theme::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .the-second-theme::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .the-second-theme::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #363636;
+  }
 
   .card {
     padding: 8px;
     margin: 5px auto;
   }
 
-  #step1-form .card img,
+  .the-first-theme #step1-form .card img,
   #step2-form .card img,
   #step3-form .card img {
     width: 100%;
     height: auto;
   }
 
-  .step1-form {
+  .the-first-theme .step1-form {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 5px;
+  }
+  .the-first-theme {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 5px;
   }
@@ -596,10 +909,9 @@ body {
   .step3-form {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-
   }
 
-  #step1-form .card-title .title h2,
+  .the-first-theme #step1-form .card-title .title h2,
   #step2-form .card-title .title h2 {
     font-size: 18px;
   }
@@ -610,7 +922,7 @@ body {
     font-weight: 700;
     line-height: 14.4px;
     text-align: right;
-    margin-top: 8px !important;
+    margin-top: 0px !important;
   }
 
   .rating-precent,
@@ -622,15 +934,14 @@ body {
     margin: 10px 0;
   }
   .items-container {
-    height: 400px;
+    height: fit-content;
     overflow-y: auto;
-
   }
   #content2 {
     margin-top: 25px;
   }
 
-  #step1-form .card img {
+  .the-first-theme #step1-form .card img {
     width: 100%;
     height: 90px;
     padding: 5px 0 0 0;
@@ -641,11 +952,19 @@ body {
   }
 
   #step2-form .card img {
-    width: 300px;
+    width: 180px;
     height: 120px;
     object-fit: cover;
   }
 
+  #step2-form .card {
+    width: fit-content;
+    padding: 15px !important;
+  }
+  #step2-form {
+    width: fit-content !important;
+    text-align: start;
+  }
   #step3-form .card img {
     width: 130px;
     height: 70px;
@@ -655,7 +974,7 @@ body {
     border-radius: 8px;
   }
 
-  #step1-form .card-title .title h2 {
+  .the-first-theme #step1-form .card-title .title h2 {
     font-family: "Almarai";
     font-size: 14px;
     font-weight: 700;
@@ -672,13 +991,11 @@ body {
     text-align: right;
   }
   #step3-form .card-title .title h2 {
-
-font-family: "Almarai";
-font-size: 16px;
-font-weight: 700;
-line-height: 19.2px;
-text-align: center;
-
+    font-family: "Almarai";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: center;
   }
   #step2-form .card-title .description span {
     font-family: "Almarai";
@@ -690,21 +1007,216 @@ text-align: center;
     margin-bottom: 18px !important;
   }
 
-  #step1-form .rating-contain {
+  .the-first-theme #step1-form .rating-contain {
     display: none;
     direction: ltr;
     align-items: center;
     justify-content: center;
     flex-direction: row;
   }
-    #content3 .text-content p {
+  #content3 .text-content p {
+    font-family: "Almarai";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: start;
+  }
 
-font-family: "Almarai";
-font-size: 16px;
-font-weight: 700;
-line-height: 19.2px;
-text-align: start;
+  .the-first-theme
+    #step1-form
+    .card
+    .price-contain
+    .product-details-btn
+    .details-btn {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px !important;
+    padding: 2px 0px !important;
+    font-family: "Almarai";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
 
+  .the-first-theme
+    #step1-form
+    .card
+    .price-contain
+    .product-details-btn
+    .details-btn:hover {
+    width: 100%;
+
+    margin-top: 10px;
+    border-radius: 8px !important;
+    padding: 2px 0px !important;
+    font-family: "Almarai";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .the-third-theme {
+    width: 100%;
+    padding: 12px 0px 50px;
+    height: 55vh;
+    overflow-y: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .step1-form-theme-3 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .step1-form-theme-3 .swiper {
+  height: auto; /* Make sure the swiper adjusts to the content's height */
+  /* overflow: visible; */
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper {
+  height: auto; /* Make sure the wrapper adjusts to the content's height */
+  /* overflow: visible; */
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper .swiper-slide {
+  height: auto; /* Ensure the slide adjusts to the card's height */
+  /* overflow: visible; */
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper .swiper-slide .card {
+  width: 166px;
+  height: auto; /* Make sure the card height fits its content */
+  /* overflow: visible; */
+  padding: 12px;
+  box-sizing: border-box;
+  margin: 5px 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper .swiper-slide .card img {
+  width: 100%;
+  height: 96px;
+  border-radius: 6px;
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper .swiper-slide .card .card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper .swiper-slide .card .card-title .title h2 {
+  font-family: "Almarai";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: right;
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper .swiper-slide .card .card-title .rating-contain {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper .swiper-slide .card .card-title .rating-contain .rating-star {
+  color: black !important;
+  font-size: 12px;
+  margin: 0px;
+}
+
+.step1-form-theme-3 .swiper .swiper-wrapper .swiper-slide .card .card-title .rating-contain .rating-precent {
+  font-family: "Almarai";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 9.6px;
+  text-align: right;
+  margin: 0;
+  align-self: center;
+}
+
+.theme-detail-card-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.theme-detail-card-3 .selected-product-name {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-detail-card-3 .selected-product-name .selected-name {
+  font-family: "Almarai";font-size: 12px;font-weight: 700;line-height: 16.8px;text-align: center;
+}
+
+.theme-detail-card-3 .selected-product-details ul {
+  text-align: start;
+}
+.theme-detail-card-3 .selected-product-details ul li {
+  font-family: "Almarai";font-size: 12px;font-weight: 400;line-height: 14.4px;
+  margin-bottom: 8px;
+}
+  .the-third-theme::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .the-third-theme::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .the-third-theme::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #363636;
+  }
+
+  .the-third-theme .image-contain-third {
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(
+      90deg,
+      rgba(241, 241, 241, 0.1) 0%,
+      #dddddd 50.26%,
+      rgba(241, 241, 241, 0.1) 100%
+    );
+    border-image-slice: 1;
+  }
+
+  .the-third-theme .image-contain-third img {
+    margin: 0 auto;
+
+    width: 100%;
+  }
+  .the-third-theme .image-contain-third .product-name {
+    font-family: "Almarai";
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 9.6px;
+    text-align: center;
   }
 
   #content2 .text-content {
@@ -713,12 +1225,15 @@ text-align: start;
 }
 
 @media (max-width: 350px) {
-  .step1-form {
+  .the-first-theme .step1-form {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 5px;
+  }
+  .the-first-theme {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 5px;
   }
 }
-
 
 /* step 2 */
 
@@ -873,159 +1388,154 @@ text-align: start;
   text-align: center;
 }
 @media (max-width: 576px) {
-
   .payment-page {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 95%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 0 35px 0;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 35px 0;
+  }
 
-.first-payment,
-.second-payment,
-.third-payment {
-  gap: 0px;
-  border-radius: 12px;
-  padding: 24px 0 0 0;
-  margin: 10px 0 0 0;
-  border: 1px rgba(0, 0, 0, 0.15) solid;
-}
-.second-payment {
-  padding: 10px 5px;
-}
-.third-payment {
-  padding: 10px 3px;
-}
-.first-payment .order-title,
-.second-payment .order-title,
-.third-payment .order-title {
-  margin: 0 auto;
+  .first-payment,
+  .second-payment,
+  .third-payment {
+    gap: 0px;
+    border-radius: 12px;
+    padding: 24px 0 0 0;
+    margin: 10px 0 0 0;
+    border: 1px rgba(0, 0, 0, 0.15) solid;
+  }
+  .second-payment {
+    padding: 10px 5px;
+  }
+  .third-payment {
+    padding: 10px 3px;
+  }
+  .first-payment .order-title,
+  .second-payment .order-title,
+  .third-payment .order-title {
+    margin: 0 auto;
 
-font-family: "Almarai";
-font-size: 14px;
-font-weight: 700;
-line-height: 16.8px;
-text-align: center;
+    font-family: "Almarai";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-align: center;
+  }
+  .first-payment div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 5px;
+  }
 
-}
-.first-payment div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 5px;
-}
+  .first-payment div span {
+    font-family: "Almarai";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+    text-align: center;
+  }
 
-.first-payment div span {
+  .first-payment > div:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
 
-font-family: "Almarai";
-font-size: 12px;
-font-weight: 700;
-line-height: 14.4px;
-text-align: center;
+  .form-details > div:not(.custom-select) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .form-details .custom-select {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .form-details .custom-select div {
+    display: flex;
+    flex-direction: column;
 
-}
+    gap: 12px;
+  }
+  .form-details > div:not(.custom-select) label,
+  .form-details .custom-select div label {
+    text-align: start;
+    margin-top: 16px;
+    font-family: "Almarai";
 
-.first-payment > div:not(:last-child) {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
-}
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+    text-align: right;
+  }
+  .form-details > div:not(.custom-select) input {
+    border: 1px solid #e6e6e6;
+    height: 48px;
+    border-radius: 8px;
+    padding: 0 10px;
+  }
+  .form-details .custom-select div select {
+    border: 1px solid #e6e6e6;
+    height: 48px;
+    border-radius: 8px;
+    direction: ltr;
+    padding: 0 10px;
+  }
 
-.form-details > div:not(.custom-select) {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.form-details .custom-select {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
-}
-.form-details .custom-select div {
-  display: flex;
-  flex-direction: column;
+  .form-payment > div:not(.custom-select) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .form-payment .custom-select {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2px;
+    width: 100%;
+  }
+  .form-payment .custom-select div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
 
-  gap: 12px;
-}
-.form-details > div:not(.custom-select) label,
-.form-details .custom-select div label {
-  text-align: start;
-  margin-top: 16px;
-  font-family: "Almarai";
+  .form-payment div input {
+    height: 48px;
+    border-radius: 8px;
+    padding: 0 10px;
+    background-color: #eaeaea;
+    border: none;
+  }
 
-font-size: 12px;
-font-weight: 700;
-line-height: 14.4px;
-text-align: right;
-}
-.form-details > div:not(.custom-select) input {
-  border: 1px solid #e6e6e6;
-  height: 48px;
-  border-radius: 8px;
-  padding: 0 10px;
-}
-.form-details .custom-select div select {
-  border: 1px solid #e6e6e6;
-  height: 48px;
-  border-radius: 8px;
-  direction: ltr;
-  padding: 0 10px;
-}
+  .form-payment div label {
+    font-family: "Almarai";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+    text-align: start;
+    margin-top: 16px;
+  }
 
-.form-payment > div:not(.custom-select) {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.form-payment .custom-select {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2px;
-  width: 100%;
-}
-.form-payment .custom-select div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
+  .payment-btn {
+    width: 100%;
+    height: 43px;
+    padding: 12px 20px 12px 20px;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+  }
 
-.form-payment div input {
-  height: 48px;
-  border-radius: 8px;
-  padding: 0 10px;
-  background-color: #eaeaea;
-  border: none;
+  .payment-btn span {
+    font-family: "Almarai";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: center;
+  }
 }
-
-.form-payment div label {
-  font-family: "Almarai";
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 14.4px;
-  text-align: start;
-  margin-top: 16px;
-}
-
-.payment-btn {
-  width: 100%;
-  height: 43px;
-  padding: 12px 20px 12px 20px;
-  border-radius: 12px;
-  background-color: black;
-  color: white;
-}
-
-.payment-btn span {
-  font-family: "Almarai";
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 19.2px;
-  text-align: center;
-}
-
- }
 /* End Payment Styles  */
 
 /* Start Single Product Styles  */
@@ -1051,7 +1561,7 @@ text-align: right;
 .product-content {
   height: 90%;
   width: 100%;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 .product-content::-webkit-scrollbar {
   width: 12px;
@@ -1123,104 +1633,98 @@ text-align: right;
   color: black;
 }
 
-
 @media (max-width: 576px) {
+  .dynamic-product {
+    background: white;
+    padding: 20px 0px 0;
+    border-radius: 8px;
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    display: none;
+  }
+  .dynamic-product .product-title {
+    display: none;
+  }
 
-.dynamic-product {
-  background: white;
-  padding: 20px 0px 0  ;
-  border-radius: 8px;
-  width: 98%;
-  margin: 0 auto;
-  text-align: center;
-  height: 100%;
-  display: none;
-}
-.dynamic-product .product-title {
-display: none;
-}
+  .product-content {
+    height: 400px;
+    width: 100%;
+    overflow-y: auto;
+  }
 
-.product-content {
-  height: 400px;
-  width: 100%;
-  overflow-y: auto;
-}
+  .product-content::-webkit-scrollbar {
+    width: 3px;
+  }
 
-.product-content::-webkit-scrollbar {
-  width: 3px;
-}
+  .product-content::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
 
-.product-content::-webkit-scrollbar-track {
-  border-radius: 8px;
-  background-color: #e7e7e7;
-  border: 1px solid #cacaca;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
+  .product-content::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #363636;
+  }
 
-.product-content::-webkit-scrollbar-thumb {
-  border-radius: 0px;
-  background-color: #363636;
-}
+  .swiper {
+    width: 300px;
+    height: 170px;
+    direction: rtl;
+    margin-bottom: 12px;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
 
-.swiper {
-  width: 300px;
-  height: 170px;
-  direction: rtl;
-  margin-bottom: 12px;
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+  .swiper-rtl .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    display: none !important;
+  }
+  .toggle-content {
+    display: flex;
+    align-items: self-start;
+    width: 100% !important;
+    border-bottom: 0.5px solid #eaeaea;
+  }
+
+  .toggle-content div {
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: all 0.3s linear;
+    font-family: "Almarai";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-align: right;
+  }
+
+  .active-btn {
+    border-bottom: 3px solid black;
+    color: black;
+  }
 }
-
-.swiper-button-next,
-.swiper-button-prev {
-display: none !important;
-}
-.swiper-rtl .swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-display: none !important;
-
-}
-.toggle-content {
-  display: flex;
-  align-items: self-start;
-  width: 100% !important;
-  border-bottom: 0.5px solid #eaeaea;
-}
-
-.toggle-content div {
-  cursor: pointer;
-  padding: 10px 10px;
-  margin: 0 10px;
-  display: inline-block;
-  transition: all 0.3s linear;
-font-family: "Almarai";
-font-size: 14px;
-font-weight: 700;
-line-height: 16.8px;
-text-align: right;
-
-}
-
-.active-btn {
-  border-bottom: 3px solid black;
-  color: black;
-}
- }
-
-
 
 .information-section,
 .rating-section {
@@ -1267,48 +1771,43 @@ text-align: right;
   color: #2b2b2b;
   text-align: start;
 }
-   
+
 @media (max-width: 576px) {
   .information-content,
-.rating-content {
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  align-self: flex-start;
-  padding: 0px 5px;
+  .rating-content {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 0px 5px;
+  }
+  .information-content .title-information {
+    display: none;
+  }
+  .information-content .description-information {
+    font-family: "Almarai";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: right;
+  }
+  .information-content .advantages-information .advantages-title {
+    font-family: "Almarai";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-align: right;
+  }
+
+  .information-content .advantages-information ul {
+    font-family: "Almarai";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+    text-align: right;
+    padding: 0 20px 0 0;
+  }
 }
-.information-content .title-information {
-  display: none;
-}
-.information-content .description-information {
-font-family: "Almarai";font-size: 12px;font-weight: 700;line-height: 19.2px;text-align: right;
-}
-.information-content .advantages-information .advantages-title {
-
-font-family: "Almarai";
-font-size: 14px;
-font-weight: 700;
-line-height: 16.8px;
-text-align: right;
-
-}
-
-.information-content .advantages-information ul {
-
-font-family: "Almarai";
-font-size: 12px;
-font-weight: 700;
-line-height: 14.4px;
-text-align: right;
-padding: 0 20px 0 0;
-
-}
-}
-  
-
-
-
-
 
 .rating-content .hotel_a {
   display: flex;
@@ -1318,9 +1817,9 @@ padding: 0 20px 0 0;
 }
 
 @media (max-width: 768px) {
-.rating-content .hotel_a {
-  display: none;
-}
+  .rating-content .hotel_a {
+    display: none;
+  }
 }
 
 .rating-content .precentage {
@@ -1533,42 +2032,38 @@ padding: 0 20px 0 0;
     height: 120px;
   }
   .guests-product {
-  margin: 20px 0 0px 0;
-  width: 100%;
-}
-.title-mobile {
-  display: block;
-}
-.title-web {
-  display: none;
-}
-.guests-title {
+    margin: 20px 0 0px 0;
+    width: 100%;
+  }
+  .title-mobile {
+    display: block;
+  }
+  .title-web {
+    display: none;
+  }
+  .guests-title {
+    font-family: "Almarai";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-align: right;
+  }
 
-font-family: "Almarai";
-font-size: 14px;
-font-weight: 700;
-line-height: 16.8px;
-text-align: right;
-
+  .guests-product .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: end;
+    margin: 0 9px !important;
+    padding: 8px;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
 }
-
-.guests-product .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background-color: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  align-items: end;
-  margin: 0 9px !important;
-  padding: 8px;
-  border-radius: 16px;
-  box-sizing: border-box;
-}
-
-}
-
 
 /* Start Guests Opinion  */
 
@@ -1637,8 +2132,6 @@ text-align: right;
   overflow: hidden;
 }
 
-
-
 .guests-opinions .swiper-slide .video-container {
   position: relative;
   width: 100%;
@@ -1657,7 +2150,7 @@ text-align: right;
   right: 0;
   bottom: 0;
   display: flex;
-  align-items: flex-end; 
+  align-items: flex-end;
   padding: 0 10px;
   justify-content: flex-end;
   color: white;
@@ -1666,7 +2159,7 @@ text-align: right;
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.5) 100%
   );
-  z-index: 1; 
+  z-index: 1;
   flex-direction: column;
   gap: 5px;
 }
@@ -1713,7 +2206,7 @@ text-align: right;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2; 
+  z-index: 2;
 }
 
 .guests-opinions .swiper-slide .play-pause-btn {
@@ -1764,7 +2257,7 @@ text-align: right;
 }
 
 .guests-opinions .swiper-button-next {
-  right: 7px; 
+  right: 7px;
 }
 
 .guests-opinions .swiper-button-prev {
@@ -1793,93 +2286,87 @@ text-align: right;
 }
 
 @media (max-width: 576px) {
-
   .guests-opinions {
-  margin: 0px 0;
-  width: 100%;
-}
+    margin: 0px 0;
+    width: 100%;
+  }
 
-.guests-opinions .guests-title {
+  .guests-opinions .guests-title {
+    font-family: "Almarai";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-align: right;
+  }
 
-font-family: "Almarai";
-font-size: 14px;
-font-weight: 700;
-line-height: 16.8px;
-text-align: right;
-
-}
-
-.guests-opinions .swiper {
-  width: 100%; 
-  height: 160px; 
-  overflow: hidden;
-  box-sizing: border-box;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  direction: ltr; /* Ensure padding is included in width/height */
+  .guests-opinions .swiper {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    direction: ltr; /* Ensure padding is included in width/height */
     padding-left: 0px; /* Add left padding */
-  padding-right: 0px;
-}
+    padding-right: 0px;
+  }
 
   .guests-opinions .swiper-wrapper {
-  display: flex;
-  padding: 0;
-}
+    display: flex;
+    padding: 0;
+  }
 
-.guests-opinions .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-  margin: 0 8px !important;
-  border-radius: 16px;
-  box-sizing: border-box;
-  position: relative;
-  width: fit-content !important;
-  height: 100%;
+  .guests-opinions .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin: 0 8px !important;
+    border-radius: 16px;
+    box-sizing: border-box;
+    position: relative;
+    width: fit-content !important;
+    height: 100%;
 
-  overflow: hidden;
-}
-.guests-opinions .swiper-slide .video-container {
-  position: relative;
-  width: 100%;
-  height: 160px;
-}
+    overflow: hidden;
+  }
+  .guests-opinions .swiper-slide .video-container {
+    position: relative;
+    width: 100%;
+    height: 160px;
+  }
 
-.guests-opinions .swiper-slide .video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
+  .guests-opinions .swiper-slide .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .guests-opinions .swiper-slide .overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 10px;
+    justify-content: flex-end;
+    color: white;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    z-index: 1;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
-.guests-opinions .swiper-slide .overlay-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: flex-end; 
-  padding: 0 10px;
-  justify-content: flex-end;
-  color: white;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-  z-index: 1; 
-  flex-direction: column;
-  gap: 5px;
-}
-
-}
-
-
 
 /* Responsive Styles */
 @media (min-width: 640px) {
@@ -1897,7 +2384,6 @@ text-align: right;
     width: calc(100% - 100px);
   }
 }
-
 
 /* End Guests Opinion  */
 

@@ -25,7 +25,7 @@
 
       <!-- Styles File  -->
 
-    <link rel="stylesheet" href="/syle.css" />
+    <link rel="stylesheet" href="syle.css" />
 
   </head>
   <body>
@@ -36,10 +36,13 @@
             <span><i class="fa-solid fa-arrow-right"></i> التالى</span>
           </button>
 
-          <img src="/assets/images/logo.png" class="image-web" alt="" />
-          <img src="/assets/images/mobile-logo.png" class="image-mobile" alt="" />
+          <img src="assets/images/logo.png" class="image-web" alt="" />
+          <img src="assets/images/mobile-logo.png" class="image-mobile" alt="" />
           <button class="previous-btn" onclick="prevStep()">
             <span>عوده </span> <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="back-to-step1" onclick="backToStepOne()">
+<i class="fa-solid fa-arrow-left"></i>
           </button>
         </div>
       </div>
@@ -48,12 +51,12 @@
           <div class="step" onclick="showStep(1)">
             <div class="image-contain">
               <img
-                src="/assets/images/gift.svg"
+                src="assets/images/gift.svg"
                 class="non-active-image"
                 alt="Step 1"
               />
               <img
-                src="/assets/images/gift.svg"
+                src="assets/images/gift.svg"
                 class="active-image"
                 alt="Step 1"
               />
@@ -63,12 +66,12 @@
           <div class="step" onclick="showStep(2)">
             <div class="image-contain">
               <img
-                src="/assets/images/shopping-cart.svg"
+                src="assets/images/shopping-cart.svg"
                 class="non-active-image"
                 alt="Step 2"
               />
               <img
-                src="/assets/images/shopping-cart-active.svg"
+                src="assets/images/shopping-cart-active.svg"
                 class="active-image"
                 alt="Step 2"
               />
@@ -78,12 +81,12 @@
           <div class="step" onclick="showStep(3)">
             <div class="image-contain">
               <img
-                src="/assets/images/step-3-non-active.svg"
+                src="assets/images/step-3-non-active.svg"
                 class="non-active-image"
                 alt="Step 3"
               />
               <img
-                src="/assets/images/step-3-active.svg"
+                src="assets/images/step-3-active.svg"
                 class="active-image"
                 alt="Step 3"
               />
@@ -97,7 +100,7 @@
         </div>
       </div>
       <div class="content-contain">
-        <div id="content1" class="dynamic-content">
+        <!-- <div id="content1" class="the-first-theme">
           <div class="text-content">
             <p class=""></p>
           </div>
@@ -114,7 +117,7 @@
                   value="Product 1"
                 />
                 <label for="checkbox1">
-                  <img src="/assets/images/product.png" alt="Product 1" />
+                  <img src="assets/images/product.png" alt="Product 1" />
                   <div class="card-title">
                     <div class="title">
                       <h2>مخلط ملكى خاص</h2>
@@ -130,6 +133,69 @@
                       السعر : 100 ريال
                       <span class="secondary-price">120ريال</span>
                     </p>
+                    <div class="product-details-btn">
+                      <button class="details-btn">عرض التفاصيل</button>
+                    </div>
+                  </div>
+
+                </label>
+              </div>
+              <div class="card" data-card-id="1">
+                <input
+                  type="checkbox"
+                  id="checkbox1"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox1">
+                  <img src="assets/images/product.png" alt="Product 1" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                      <p class="rating-count">(46)</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                          <div class="product-details-btn">
+                      <button class="details-btn">عرض التفاصيل</button>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="card" data-card-id="1">
+                <input
+                  type="checkbox"
+                  id="checkbox1"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox1">
+                  <img src="assets/images/product.png" alt="Product 1" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                      <p class="rating-count">(46)</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>      <div class="product-details-btn">
+                      <button class="details-btn">عرض التفاصيل</button>
+                    </div>
                   </div>
                 </label>
               </div>
@@ -141,7 +207,7 @@
                   value="Product 2"
                 />
                 <label for="checkbox2">
-                  <img src="/assets/images/product.png" alt="Product 2" />
+                  <img src="assets/images/product.png" alt="Product 2" />
                   <div class="card-title">
                     <div class="title">
                       <h2>مخلط ملكى خاص</h2>
@@ -157,6 +223,9 @@
                       السعر : 100 ريال
                       <span class="secondary-price">120ريال</span>
                     </p>
+                          <div class="product-details-btn">
+                      <button class="details-btn">عرض التفاصيل</button>
+                    </div>
                   </div>
                 </label>
               </div>
@@ -168,7 +237,7 @@
                   value="Product 3"
                 />
                 <label for="checkbox3">
-                  <img src="/assets/images/product.png" alt="Product 3" />
+                  <img src="assets/images/product.png" alt="Product 3" />
                   <div class="card-title">
                     <div class="title">
                       <h2>مخلط ملكى خاص</h2>
@@ -184,11 +253,270 @@
                       السعر : 100 ريال
                       <span class="secondary-price">120ريال</span>
                     </p>
+                          <div class="product-details-btn">
+                      <button class="details-btn">عرض التفاصيل</button>
+                    </div>
                   </div>
                 </label>
               </div>
             </form>
           </div>
+        </div> -->
+       
+       
+        <!-- <div id="content1" class="the-second-theme">
+
+            <div id="step1-warning" style="display: none;">
+              الرجاء اختر منتج أولا
+            </div>
+
+          <form id="step1-form" class="step1-form step1-form-theme-2">
+              <div class="card" data-card-id="10">
+                <input
+                  type="checkbox"
+                  id="checkbox1"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox1">
+                  <img src="assets/images/theme-two-card-1.png" alt="Product 1" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+
+                  <div class="card-actions">
+                    <div class="btn-detail-contain">
+                      <button class="btn-detail">التفاصيل</button>
+                    </div>
+                    <div class="btn-buy-contain">
+                      <button class="btn-buy">شراء</button>
+                    </div>
+                  </div>
+
+                </label>
+              </div>
+              <div class="card" data-card-id="20">
+                <input
+                  type="checkbox"
+                  id="checkbox2"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox2">
+                  <img src="assets/images/theme-two-card-2.png" alt="Product 1" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+
+                  <div class="card-actions">
+                    <div class="btn-detail-contain">
+                      <button class="btn-detail">التفاصيل</button>
+                    </div>
+                    <div class="btn-buy-contain">
+                      <button class="btn-buy">شراء</button>
+                    </div>
+                  </div>
+
+                </label>
+              </div>
+              <div class="card" data-card-id="30">
+                <input
+                  type="checkbox"
+                  id="checkbox3"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox3">
+                  <img src="assets/images/theme-two-card-3.png" alt="Product 1" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+
+                  <div class="card-actions">
+                    <div class="btn-detail-contain">
+                      <button class="btn-detail">التفاصيل</button>
+                    </div>
+                    <div class="btn-buy-contain">
+                      <button class="btn-buy">شراء</button>
+                    </div>
+                  </div>
+
+                </label>
+              </div>
+              <div class="card" data-card-id="40">
+                <input
+                  type="checkbox"
+                  id="checkbox4"
+                  name="product"
+                  value="Product 1"
+                />
+                <label for="checkbox4">
+                  <img src="assets/images/theme-two-card-1.png" alt="Product 1" />
+                  <div class="card-title">
+                    <div class="title">
+                      <h2>مخلط ملكى خاص</h2>
+                    </div>
+                    <div class="rating-contain">
+                      <i class="fa-solid fa-star rating-star"></i>
+                      <p class="rating-precent">4.6</p>
+                    </div>
+                  </div>
+                  <div class="price-contain">
+                    <p class="price-text">
+                      السعر : 100 ريال
+                      <span class="secondary-price">120ريال</span>
+                    </p>
+                  </div>
+
+                  <div class="card-actions">
+                    <div class="btn-detail-contain">
+                      <button class="btn-detail">التفاصيل</button>
+                    </div>
+                    <div class="btn-buy-contain">
+                      <button class="btn-buy">شراء</button>
+                    </div>
+                  </div>
+
+                </label>
+              </div>
+
+            </form>
+       
+        </div> -->
+
+
+
+        <div id="content1" class="the-third-theme ">
+
+            <div id="step1-warning" style="display: none;">
+              الرجاء اختر منتج أولا
+            </div>
+            <div class="image-contain-third">
+<img src="" alt="" class="product-image">
+<h2 class="product-name">ساعه ( VS ) المقدمه من أبل</h2>
+            </div>
+<form id="step1-form" class="step1-form step1-form-theme-3">
+  <div class="swiper mySwiper5">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card" data-card-id="10">
+          <input type="checkbox" id="checkbox1" name="product" value="Product 1" />
+          <label for="checkbox1">
+            <img src="assets/images/theme-two-card-1.png" alt="Product 1" />
+            <div class="card-title">
+              <div class="title">
+                <h2>اسم المنتج</h2>
+              </div>
+              <div class="rating-contain">
+                <i class="fa-solid fa-star rating-star"></i>
+                <p class="rating-precent">4.6</p>
+              </div>
+            </div>
+            <div class="price-contain">
+              <p class="price-text">السعر : 100 ريال <span class="secondary-price">120ريال</span></p>
+            </div>
+
+          </label>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card" data-card-id="10">
+          <input type="checkbox" id="checkbox1" name="product" value="Product 1" />
+          <label for="checkbox1">
+            <img src="assets/images/theme-two-card-2.png" alt="Product 1" />
+            <div class="card-title">
+              <div class="title">
+                <h2>اسم المنتج</h2>
+              </div>
+              <div class="rating-contain">
+                <i class="fa-solid fa-star rating-star"></i>
+                <p class="rating-precent">4.6</p>
+              </div>
+            </div>
+            <div class="price-contain">
+              <p class="price-text">السعر : 100 ريال <span class="secondary-price">120ريال</span></p>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card" data-card-id="10">
+          <input type="checkbox" id="checkbox1" name="product" value="Product 1" />
+          <label for="checkbox1">
+            <img src="assets/images/theme-two-card-3.png" alt="Product 1" />
+            <div class="card-title">
+              <div class="title">
+                <h2>اسم المنتج</h2>
+              </div>
+              <div class="rating-contain">
+                <i class="fa-solid fa-star rating-star"></i>
+                <p class="rating-precent">4.6</p>
+              </div>
+            </div>
+            <div class="price-contain">
+              <p class="price-text">السعر : 100 ريال <span class="secondary-price">120ريال</span></p>
+            </div>
+          </label>
+        </div>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</form>
+<div class="theme-detail-card-3">
+  <div class="selected-product-name">
+      <h2 class="selected-name">تفاصيل VS</h2>
+  </div>
+  <div class="selected-product-details">
+          <ul>
+   <li>التفاصيل الخاصة بالمنتج تكتب هنا</li>
+   <li>التفاصيل الخاصة بالمنتج تكتب هنا</li>
+   <li>التفاصيل الخاصة بالمنتج تكتب هنا</li>
+   <li>التفاصيل الخاصة بالمنتج تكتب هنا</li>
+          </ul>
+  </div>
+</div>
+       <div>
+
+       </div>
         </div>
 
         <div id="content2" class="dynamic-content">
@@ -208,7 +536,7 @@
                   value="Product 1"
                 />
                 <label for="checkbox4">
-                  <img src="/assets/images/offer.png" alt="Product 1" />
+                  <img src="assets/images/offer.png" alt="Product 1" />
 
                   <hr class="horizontal-line" />
 
@@ -236,7 +564,7 @@
                   value="Product 2"
                 />
                 <label for="checkbox5">
-                  <img src="/assets/images/offer.png" alt="Product 2" />
+                  <img src="assets/images/offer.png" alt="Product 2" />
                   <hr class="horizontal-line" />
                   <div class="card-title">
                     <div class="title">
@@ -262,7 +590,7 @@
                   value="Product 3"
                 />
                 <label for="checkbox6">
-                  <img src="/assets/images/offer.png" alt="Product 3" />
+                  <img src="assets/images/offer.png" alt="Product 3" />
                   <hr class="horizontal-line" />
                   <div class="card-title">
                     <div class="title">
@@ -293,21 +621,19 @@
               الرجاء اختر هدية أولا
             </div>
             <form id="step3-form" class="step3-form">
-              <div class="card" data-card-id="7">
+        <div class="card" data-card-id="7">
                 <input
                   type="checkbox"
                   id="checkbox7"
                   name="product"
-                  value="Product 1"
+                  value="Product 4"
                 />
                 <label for="checkbox7">
-                  <img src="/assets/images/step3-1.png" alt="Product 1" />
-
-          
-
+                  <img src="assets/images/step3-4.png" alt="Product 4" />
+              
                   <div class="card-title">
                     <div class="title">
-                      <h2>قاعده اعواد النيد</h2>
+                      <h2>توصيل مجانى</h2>
                     </div>
                   </div>
                 </label>
@@ -320,7 +646,7 @@
                   value="Product 2"
                 />
                 <label for="checkbox8">
-                  <img src="/assets/images/step3-2.png" alt="Product 2" />
+                  <img src="assets/images/step3-2.png" alt="Product 2" />
              
                   <div class="card-title">
                     <div class="title">
@@ -337,7 +663,7 @@
                   value="Product 3"
                 />
                 <label for="checkbox9">
-                  <img src="/assets/images/step3-3.png" alt="Product 3" />
+                  <img src="assets/images/step3-3.png" alt="Product 3" />
        
                   <div class="card-title">
                     <div class="title">
@@ -346,19 +672,23 @@
                   </div>
                 </label>
               </div>
-              <div class="card" data-card-id="10">
+      
+                            <div class="card" data-card-id="10">
                 <input
                   type="checkbox"
                   id="checkbox10"
                   name="product"
-                  value="Product 4"
+                  value="Product 1"
                 />
                 <label for="checkbox10">
-                  <img src="/assets/images/step3-4.png" alt="Product 4" />
-              
+                  <img src="assets/images/discount.png" alt="Product 1" />
+
+          
+
                   <div class="card-title">
                     <div class="title">
-                      <h2>توصيل مجانى</h2>
+                      <h2>خصم 30%</h2>
+                      <h2 style="display: none;">300 ريال</h2>
                     </div>
                   </div>
                 </label>
@@ -374,19 +704,19 @@
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="/assets/images/single-product.png" alt="">
+        <img src="assets/images/single-product.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="/assets/images/single-product.png" alt="">
+        <img src="assets/images/single-product.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="/assets/images/single-product.png" alt="">
+        <img src="assets/images/single-product.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="/assets/images/single-product.png" alt="">
+        <img src="assets/images/single-product.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="/assets/images/single-product.png" alt="">
+        <img src="assets/images/single-product.png" alt="">
       </div>
     </div>
     <div class="swiper-button-next"></div>
@@ -446,7 +776,7 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
                 <div class="guest-name">
-          <img src="/assets/images/guest.png" alt="">
+          <img src="assets/images/guest.png" alt="">
           <h2>Anwar Gepapwy 1 </h2>
         </div>
         <div class="guest-opinion">
@@ -455,7 +785,7 @@
       </div>
       <div class="swiper-slide">
                 <div class="guest-name">
-          <img src="/assets/images/guest-2.png" alt="">
+          <img src="assets/images/guest-2.png" alt="">
           <h2>Anwar Gepapwy 2</h2>
         </div>
         <div class="guest-opinion">
@@ -464,7 +794,7 @@
       </div>
       <div class="swiper-slide">
                 <div class="guest-name">
-          <img src="/assets/images/guest.png" alt="">
+          <img src="assets/images/guest.png" alt="">
           <h2>Anwar Gepapwy</h2>
         </div>
         <div class="guest-opinion">
@@ -473,7 +803,7 @@
       </div>
       <div class="swiper-slide">
                 <div class="guest-name">
-          <img src="/assets/images/guest-2.png" alt="">
+          <img src="assets/images/guest-2.png" alt="">
           <h2>Anwar Gepapwy</h2>
         </div>
         <div class="guest-opinion">
@@ -482,7 +812,7 @@
       </div>
       <div class="swiper-slide">
                 <div class="guest-name">
-          <img src="/assets/images/guest.png" alt="">
+          <img src="assets/images/guest.png" alt="">
           <h2>Anwar Gepapwy</h2>
         </div>
         <div class="guest-opinion">
@@ -491,7 +821,7 @@
       </div>
       <div class="swiper-slide">
                 <div class="guest-name">
-          <img src="/assets/images/guest-2.png" alt="">
+          <img src="assets/images/guest-2.png" alt="">
           <h2>Anwar Gepapwy</h2>
         </div>
         <div class="guest-opinion">
@@ -519,7 +849,7 @@
   <div class="guest-name">
     <div class="video-container">
       <video class="video" id="video1" loop>
-        <source src="/assets/video.mp4" type="video/mp4">
+        <source src="assets/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="overlay-text">
@@ -544,7 +874,7 @@
   <div class="guest-name">
     <div class="video-container">
       <video class="video" id="video2" loop>
-        <source src="/assets/video.mp4" type="video/mp4">
+        <source src="assets/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="overlay-text">
@@ -569,7 +899,7 @@
   <div class="guest-name">
     <div class="video-container">
       <video class="video" id="video3" loop>
-        <source src="/assets/video.mp4" type="video/mp4">
+        <source src="assets/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="overlay-text">
@@ -594,7 +924,7 @@
   <div class="guest-name">
     <div class="video-container">
       <video class="video" id="video4" loop>
-        <source src="/assets/video.mp4" type="video/mp4">
+        <source src="assets/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="overlay-text">
@@ -619,7 +949,7 @@
   <div class="guest-name">
     <div class="video-container">
       <video class="video" id="video5" loop>
-        <source src="/assets/video.mp4" type="video/mp4">
+        <source src="assets/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="overlay-text">
@@ -739,7 +1069,7 @@
       </div>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 
 
     
@@ -810,6 +1140,38 @@
         },
       }
     });
+
+
+  var swiper = new Swiper(".mySwiper5", {
+  slidesPerView: 3, /* Default for larger screens */
+  spaceBetween: 10, /* Reduced space between slides */
+  loop: true, /* Infinite loop */
+  centeredSlides: false, /* For larger screens */
+  navigation: {
+    nextEl: ".swiper-button-prev",
+    prevEl: ".swiper-button-next",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.4, /* Show 1 full slide and half of the next/previous */
+      spaceBetween: 10,
+
+    },
+    640: {
+      slidesPerView: 2, /* For screens 640px and above */
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 3, /* For screens 768px and above */
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3, /* For screens 1024px and above */
+      spaceBetween: 25, /* Reduced from 75 */
+    },
+  }
+});
+
   </script>
   </script>
   </body>
